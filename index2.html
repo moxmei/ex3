@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>移动端最小宽度,固定高度布局</title>
+		<style>
+			body>* {
+				width:100%;				
+				min-width: 640px;				
+			}
+		</style>
+		<link rel="stylesheet" href="css/main.css" type="text/css"> 
+	</head>
+
+	<body>
+		<header>
+			<h1>移动端网页布局</h1>
+			<h2>最小宽度（640px），固定高度(1030px)布局</h2>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">固定宽高和水平居中</a></li>
+				<li><a href="#">最小宽度和固定高度</a></li>
+				<li><a href="index3.html">最小宽度和高度满屏</a></li>
+			</ul>			
+		</nav>
+		<section>
+			<aside>
+				<p>
+				大广赛互动类H5作品要求：作品分辨率要适合手机屏幕尺寸，即默认竖屏的页面宽度640px，高度可以为1008px、1030px。建议初始的设计稿页面内容尺寸为640px*1030px。实际布局可采用三种方案。
+				</p>
+				<p>（1）固定宽度（640px）居中布局</p>
+				<p>（2）最小宽度（640px）和固定高度（1030px）布局</p>	
+				<p>（3）最小宽度（640px）和高度百分比布局</p>				
+			</aside>
+			<article>
+				<p>
+					如果需要在大多数不同尺寸和比例移动设备中都能出现竖屏宽度满屏显示的效果（出于对设备尺寸比例不同和用户对横向浏览体验要求更高的考虑，这里总高度还是简单固定为1030px），可以设置采用640px宽度设计稿中的原始素材，并设置body中第一代子元素（body>*）的最小宽度（min-width: 640px;）。其他元素则采用百分比的形式对应第一代子元素进行横向缩放显示。
+				</p>
+				<p>
+					这种布局方法需要考虑图片等素材的样式也应设置为百分比形式，以实现按比例缩放效果，并注意模拟多种设备调试观察效果，以确定最终的布局方案。
+				</p>
+			</article>		       
+		</section>
+		<footer>版权所有©Copyright 2019-2022 浙江传媒学院 媒体工程学院  版本V-1.0</footer>
+	</body>
+
+</html>

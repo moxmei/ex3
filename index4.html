@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>移动端固定宽度和高度页面布局</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+		<style>
+			html,
+			body {				
+				width: 100%;
+				height: 100%;
+			}
+			#main {				
+				width: 640px;
+				height:1030px;	
+				margin:0 auto;			
+			}
+			html,body,ul,li{
+				margin:0;
+				padding:0;
+			}
+			ul,li{
+				list-style: none;
+			}
+			a{
+				color:#FFF;
+				text-decoration: none;
+			}
+			body{					
+			
+				color:#FFF;		
+			}
+			*{
+				box-sizing:border-box;
+			}
+			main>* {											
+				margin: 0 auto;
+				margin-top: 5px;
+			}						
+			header {
+				height: 100px;
+				padding-top: 5px;				
+				background-image:url("res/banner.jpg");
+				background-repeat:no-repeat;
+				background-size:cover;				
+				color:#FFF;
+			}
+			nav{				
+				height:50px;
+				line-height: 50px;				
+				background-color:#0031aa;
+				}
+			nav>ul{
+				display:flex;
+				justify-content: space-around;
+			}		
+			section {
+				height: 830px;
+			}
+			
+			footer {
+				height: 30px;
+				background-color:#0038A7;
+				text-align: center;
+			}
+			section{
+				display:flex;
+				justify-content:space-between;
+			}
+			
+			section>* {
+				height: 100%;				
+			}
+			
+			aside {
+				flex:3;
+				padding:10px;
+				margin-right:5px;
+				background-color:#015ad8;
+			}			
+			article {
+				flex:7;
+				padding:10px;
+				background-color:#013db7;
+			}
+			h1{
+				font-size:28px;
+				margin:5px;				
+				text-align: center;
+			}
+			h2{
+				font-size:24px;
+				margin-top:5px;
+				text-align: center;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+		<div id="main">
+		<header>
+			<h1>移动端网页布局</h1>
+			<h2>固定宽度（640px）居中，固定高度布局</h2>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="#">固定宽高和水平居中</a></li>
+				<li><a href="index2.html">最小宽度和固定高度</a></li>
+				<li><a href="index3.html">最小宽度和高度满屏</a></li>
+			</ul>			
+		</nav>
+		<section>
+			<aside>
+				<p>
+				大广赛互动类H5作品要求：作品分辨率要适合手机屏幕尺寸，即默认竖屏的页面宽度640px，高度可以为1008px、1030px。建议初始的设计稿页面内容尺寸为640px*1030px。实际布局可采用三种方案。
+				</p>
+				<p>（1）固定宽度（640px）居中布局</p>
+				<p>（2）最小宽度（640px）和固定高度（1030px）布局</p>	
+				<p>（3）最小宽度（640px）和高度百分比布局</p>	
+			</aside>
+			<article>
+				<p>
+					在移动端网页布局中，固定宽度（640px）的居中布局是过去比较常见的方式，要求页面所有的主体内容宽度均为640px，且在页面水平居中。这种方式的优点是布局简单，可以直接采用设计稿中每个页面元素的尺寸和比例，不会受设备大小和尺寸比例的影响出现明显失真，缺点是在某些尺寸较大的移动设备中留白较多，不用充分利用宽屏设备中的显示空间。
+				</p>
+				<p>
+					为了便于设置body中第一代子元素（body>*，即页面主体元素）的宽度固定为640px，可以采用怪异盒模型（box-sizing:border-box;）。在这个模型中，盒子的宽高尺寸均包括内容、填充和边框三部分，即margin外的总宽度。这样不需要计算减掉边框和填充后的盒子内容宽高，简化了布局的复杂度。
+				</p>
+				<p>
+					另外两个基本代码是固定宽度（width: 640px;）和水平居中（margin: 0 auto;），其他属性可根据实际需求设置。
+				</p>
+			</article>		       
+		</section>
+		<footer>版权所有©Copyright 2019-2022 浙江传媒学院 媒体工程学院  版本V-1.0</footer>
+		</div>
+	</body>
+</html>
